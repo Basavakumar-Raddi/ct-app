@@ -1,0 +1,41 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form #pointform = "ngForm" (ngSubmit) = "onClickSubmit(pointform.value)" >
+      <div class="form-group">
+          <label for="name">Name</label>
+          <input class="form-control" type="text" id="name" [(ngModel)]="model.name" name="name" #name="ngModel">
+      </div>
+      <div class="form-group">
+          <label for="sector">Sector</label>
+          <input class="form-control" type="text" id="sector" [(ngModel)]="model.sector" name="sector" #sector="ngModel">
+      </div>
+
+    <div class="form-group">
+      <label for="initiationDate">InitiationDate</label>
+      <input class="form-control" type="text" 
+          placeholder = "YYYY-MMM-DD" 
+          id="initiationDate" [(ngModel)]="model.initiationDate" 
+          name="initiationDate" #initiationDate="ngModel">
+    </div>
+    
+    <div class="form-group">
+      <label for="investmentRequired">InvestmentRequired</label>
+      <input class="form-control" type="text" id="investmentRequired" [(ngModel)]="model.investmentRequired" name="investmentRequired" #investmentRequired="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="stakeOffered">StakeOffered</label>
+      <input class="form-control" type="text" id="stakeOffered" [(ngModel)]="model.stakeOffered" name="stakeOffered" #stakeOffered="ngModel">
+    </div>
+    
+    <div class="form-group">
+      <input type = "submit" class="btn btn-primary"  value = "submit">
+    </div>
+  </form>
+
+</div>
+

@@ -1,0 +1,21 @@
+
+
+<div class="parentGridDiv">
+  <ag-grid-angular style="width:600px; height:375px;" class="ag-theme-balham" [gridOptions]="gridOptions">
+  </ag-grid-angular>
+</div>
+
+<div class="parentGridDiv">
+<div class="btnDiv">
+  <button class="btn btn-primary" (click)="addPoint()"> Add</button>
+</div>
+
+<div class="btnDiv">
+  <button class="btn btn-primary" [disabled]="!rowSelected" (click)="updatePoint()"> Update</button>
+</div>
+
+<div class="btnDiv">
+  <button class="btn btn-primary" [disabled]="!rowSelected" (click)="deletePoint()"> Delete</button>
+</div>
+</div>
+
